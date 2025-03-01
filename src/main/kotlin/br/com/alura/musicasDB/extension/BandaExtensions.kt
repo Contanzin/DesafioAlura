@@ -1,5 +1,6 @@
 package br.com.alura.musicasDB.extension
 
+import br.com.alura.musicasDB.dados.BandaEntity
 import br.com.alura.musicasDB.modelos.Banda
 
 fun Banda.toEntity(): BandaEntity {

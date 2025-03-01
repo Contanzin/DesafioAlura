@@ -3,17 +3,11 @@ package br.com.alura.musicasDB.dados
 import javax.persistence.*
 
 @Entity
-@Table(name = "Album")
+@Table(name = "album")
 class AlbumEntity(
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: String = 0,
     var titulo: String = "Titulo do Album",
-    @OneToMany
-    var banda: String
-
-
-
-
-) {
-
-}
+    @ManyToOne
+    var banda: BandaEntity = BandaEntity(),
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var id: Int = 0
+)
